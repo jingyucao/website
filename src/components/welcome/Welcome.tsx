@@ -12,7 +12,7 @@ const Welcome = () => {
             <div className={classes.introduction}>
                 <div className={classes.middleFont}>Hello World, I am</div>
                 <div className={classes.bigFont}>JINGYU CAO</div>
-                {/*<div className={classes.smallFont}>I am a Self-taught Frontend Developer.<br/>I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.</div>*/}
+                <div className={classes.smallFont}>I am a Self-taught Frontend Developer.<br/>I build websites with a focus on responsiveness, accessibility and pleasing aesthetics.</div>
             </div>
             <div className={classes.logo}>
                 <a href="https://www.linkedin.com/in/jingyu-cao-7457a4169/">
