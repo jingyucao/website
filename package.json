@@ -4,6 +4,9 @@
   "homepage": "https://jingyucao.github.io/website",
   "private": true,
   "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/material": "7.3.2",
     "@testing-library/jest-dom": "6.8.0",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
@@ -12,21 +15,23 @@
     "react-dom": "18.3.1",
     "react-responsive-carousel": "3.2.23",
     "react-router-dom": "6.2.2",
-    "react-scripts": "5.0.0",
     "web-vitals": "5.1.0"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d dist",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -43,10 +48,26 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "7.27.1",
+    "@chromatic-com/storybook": "^4.1.1",
+    "@storybook/addon-a11y": "^9.1.4",
+    "@storybook/addon-docs": "^9.1.4",
+    "@storybook/addon-onboarding": "^9.1.4",
+    "@storybook/addon-vitest": "^9.1.4",
+    "@storybook/react-vite": "^9.1.4",
     "@types/jest": "30.0.0",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
     "eslint": "9.34.0",
+    "eslint-plugin-storybook": "^9.1.4",
     "gh-pages": "6.3.0",
     "identity-obj-proxy": "3.0.0",
-    "ts-jest": "29.4.1"
+    "storybook": "^9.1.4",
+    "ts-jest": "29.4.1",
+    "typescript": "5.9.2",
+    "vite": "7.1.4",
+    "vitest": "^3.2.4",
+    "@vitest/browser": "^3.2.4",
+    "playwright": "^1.55.0",
+    "@vitest/coverage-v8": "^3.2.4"
   }
 }
