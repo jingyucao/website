@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+import ContextProviders from './ContextProviders';
+
 import App from './App';
-import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
-  <HashRouter>
-    <App />
-  </HashRouter>
+  <React.StrictMode>
+    <ContextProviders>
+      <App />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </ContextProviders>
+  </React.StrictMode>
 );
